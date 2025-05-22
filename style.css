@@ -1,4 +1,7 @@
-
+* {
+    margin: 0;
+    padding: 0;
+}
 .sunny {
   background: url('images/sunnt.jpg') no-repeat center center fixed;
   background-size: cover;
@@ -24,4 +27,27 @@
 }
 .hidden {
   display: none;
+}
+header {
+    background-color: #2468AC;
+}
+h1 {
+    text-align: left;
+    padding: 5% 5% 5% 7%;
+    color: white;
+}
+.input-button{
+    text-align: center;
+    padding-bottom: 4%;
+}
+#buttonville{
+    padding: 2%;
+    border-radius: 1rem;
+    padding-inline: 10%;
+    
+}
+#rechercher{
+    padding: 2%;
+    border-radius: 1rem;
+    padding-inline: 5%;
 }
