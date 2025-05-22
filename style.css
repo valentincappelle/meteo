@@ -1,0 +1,27 @@
+
+.sunny {
+  background: url('images/sunnt.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.cloudy {
+  background: url('images/cloudy.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.rainy {
+  background: url('images/rainy.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.snowy {
+  background: url('images/snowy.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.default-weather {
+  background: #dfe6e9;
+}
+.hidden {
+  display: none;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Application météo</title>
+     <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+     <div class="container">
+          <header>
+               <h1> Météo </h1>
+               <input type="text" id="buttonville" list="autocompletion" placeholder="Entrez le nom d'une ville" />
+               <datalist id="autocompletion"></datalist>
+               <button id="rechercher">Rechercher</button>
+          </header>
+          <div id="chargement" class="hidden">Chargement...</div>
+          <div id="resultatmeteo" class="hidden">
+               <h2 id="nomville"></h2>
+               <img id="iconemeteo" src="" alt="Icône météo" />
+               <p id="temperature"></p>
+               <p id="description"></p>
+               <p id="vent"></p>
+               <p id="humidite"></p>
+          </div>
+     </div>
+
+     <script src="scripts.js"></script>
+</body>
+
+</html>
