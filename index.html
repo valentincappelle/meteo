@@ -11,11 +11,14 @@
 <body>
      <div class="container">
           <header>
-               <h1> Météo </h1>
+               <div class="logo-title">
+                    <img src="./images/logometeo.png" alt="Logo météo" class="logo" />
+                    <h1> Météo </h1>
+               </div>
                <div class="input-button">
-               <input type="text" id="buttonville" list="autocompletion" placeholder="Entrez le nom d'une ville" />
-               <datalist id="autocompletion"></datalist>
-               <button id="rechercher">Rechercher</button>
+                    <input type="text" id="buttonville" list="autocompletion" placeholder="Entrez le nom d'une ville" />
+                    <datalist id="autocompletion"></datalist>
+                    <button id="rechercher">Rechercher</button>
                </div>
           </header>
           <div id="chargement" class="hidden">Chargement...</div>
@@ -28,6 +31,9 @@
                <p id="humidite"></p>
           </div>
      </div>
+     <footer>
+          <p class="pfooter">&copy; Valentin CAPPELLE - 2025</p>
+     </footer>
 
      <script src="scripts.js"></script>
 </body>

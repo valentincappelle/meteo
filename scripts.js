@@ -13,7 +13,8 @@ let humidity = document.getElementById("humidite");
 const apiKey = "3432083903fe6dfdc2e09fadb51702e9";
 
 
-buttonsearch.addEventListener("click", () => {
+buttonsearch.addEventListener("click", (e) => {
+    e.preventDefault();
   let city = inputcity.value.trim();
   if (city !== "") {
     fetchWeatherData(city);
@@ -45,7 +46,7 @@ async function fetchWeatherData(city) {
 
 function displayWeather(data) {
   cityName.textContent = data.name;
-  temperature.textContent = `${data.main.temp}°C`;
+  temperature.textContent = `${data.main.temp.toFixed(1)}°C`;
   description.textContent = data.weather[0].description;
   icon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
   icon.alt = data.weather[0].description;
@@ -114,3 +115,4 @@ inputcity.addEventListener("input", async () => {
     console.error("Erreur lors de la récupération des villes :", error);
   }
 });
+fetchWeatherData("Beauvais")
