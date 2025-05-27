@@ -1,89 +1,340 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
+
 .sunny {
-  background: url('images/sunnt.jpg') no-repeat center center fixed;
+  background: url('images/sunny.jpg') center center fixed;
   background-size: cover;
 }
 
 .cloudy {
-  background: url('images/cloudy.jpg') no-repeat center center fixed;
+  background: url('images/cloudy.jpg') center center fixed;
   background-size: cover;
 }
 
 .rainy {
-  background: url('images/rainy.jpg') no-repeat center center fixed;
+  background: url('images/rainy.jpg') center center fixed;
   background-size: cover;
 }
 
 .snowy {
-  background: url('images/snowy.jpg') no-repeat center center fixed;
+  background: url('images/snowy.jpg') center center fixed;
   background-size: cover;
 }
 
-.default-weather {
-  background: white;
+.fewclouds {
+  background: url('images/peunuageux.jpg') center center fixed;
+  background-size: cover;
 }
+.foggy {
+  background: url('images/Foggy.jpg') center center fixed;
+  background-size: cover;
+}
+
 .hidden {
   display: none;
 }
+
+
 header {
-    background-color: #968C8C80 ;
-    margin: 0 5% 5% 5%;
-    border-radius: 1rem;
+  background-color: rgba(150, 140, 140, 0.5);
+  margin: 2rem 1rem;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  backdrop-filter: blur(0.5rem);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-.logo-title{
-    display: flex;
-    justify-content: space-between;
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
+.logo {
+  width: 20%;
+  height: auto;
+  margin-right: 1rem;
+}
+
 h1 {
-    text-align: left;
-    padding: 5% 5% 5% 7%;
-    color: white;
-    font-size: 3rem;
+  font-size: 3rem;
+  color: white;
 }
-.logo{
-    width: 30%;
-    height: 30%;
+
+.input-button {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding-block: 1rem;
 
 }
-.input-button{
-    text-align: center;
-    padding-bottom: 4%;
+
+#inputville {
+  padding: 0.8rem 1.2rem;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+  border: none;
+  width: 100%;
+  box-shadow: 0 0.5rem 8px rgba(0, 0, 0, 0.1);
 }
-#buttonville{
-    padding: 3%;
-    border-radius: 1rem;
-    padding-inline: 10%;
-    
+
+#rechercher {
+  background-color: #ffffff33;
+  padding: 0.8rem 1rem;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 1.4rem;
+  transition: 0.3s;
 }
-#rechercher{
-    padding: 3%;
-    border-radius: 1rem;
-    padding-inline: 5%;
+
+#rechercher:hover {
+  background-color: #ffffff66;
 }
-#resultatmeteo{
-    text-align: center;
-    padding-top: 10%;
-    background: #968C8c80;
-    margin: 5%;
-    border-radius: 5%;
-    margin-bottom: 10rem;
+
+
+#resultatmeteo {
+  text-align: center;
+  margin: 2rem 1rem;
+  padding: 3rem 1rem;
+  background-color: rgba(150, 140, 140, 0.5);
+  border-radius: 1.5rem;
+  backdrop-filter: blur(0.5rem);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
-h2{
-    font-size: 3rem;
-    color: white;
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
 }
-#iconemeteo{
-    width: 50%;
+
+#iconemeteo {
+  width: 50%;
 }
-p{
-    font-size: 2rem;
-    padding-block: 0.8rem;
-    color: white;
+
+p {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  padding-block: 0.5rem;
+  color: white;
 }
-.pfooter{
+
+#previsions {
+  background-color: rgba(150, 140, 140, 0.5);
+  margin: 2rem 1rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  backdrop-filter: blur(0.5rem);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#previsions h2 {
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.jour {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(180, 180, 180, 0.3);
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  color: white;
+
+}
+
+.jour h3 {
+  margin: 0;
+  font-size: 1rem;
+  flex: 1
+}
+
+.jour img {
+  width: 25%;
+}
+
+.jour p {
+  font-size: 1rem;
+  flex: 1;
+  text-align: right;
+}
+
+footer {
+  width: 100%; 
+  padding-block: 1rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+.pfooter {
+  font-size: 1rem;
+}
+
+@media (min-width: 601px) {
+
+  header,
+  #resultatmeteo,
+  #previsions {
+    max-width: 90%;
+    margin: 2rem;
+    padding: 2rem;
+  }
+
+  .logo-title {
+    flex-direction: row;
+    padding-inline: 7%;
+  }
+
+  #inputville {
+    width: 70%;
     font-size: 1rem;
+  }
+
+  #rechercher {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.2rem;
+  }
+
+  #iconemeteo {
+    width: 30%;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .jour {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .jour h3 {
+    font-size: 1.1rem;
+  }
+
+  .jour p {
+    font-size: 1.1rem;
+  }
+
+  .jour img {
+    width: 3.2rem;
+  }
+}
+
+
+@media (min-width: 1024px) {
+ .contenu-flex {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 2rem 2rem 2rem;
+    box-sizing: border-box;
+  }
+
+  #resultatmeteo,
+  #previsions {
+    flex: 1;
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+  main {
+    flex: 1;
+    overflow-y: auto;
+    width: 100%;
+  }
+
+  .input-button {
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 3.5rem;
     text-align: center;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  #iconemeteo {
+    width: 10rem;
+    margin: 1rem auto;
+  }
+
+  #inputville {
+    width: 70%;
+    font-size: 1.1rem;
+  }
+
+  #rechercher {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  #previsions h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  #jours {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .jour {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 0.8rem;
+  }
+
+  .jour h3 {
+    font-size: 1.2rem;
+  }
+
+  .jour p {
+    font-size: 1.2rem;
+  }
+
+  .jour img {
+    width: 3rem;
+  }
+
+
 }

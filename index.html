@@ -2,35 +2,44 @@
 <html lang="fr">
 
 <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
      <title>Application météo</title>
-     <link rel="stylesheet" type="text/css" href="style.css">
+     <link rel="stylesheet" href="style.css" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body>
      <div class="container">
           <header>
                <div class="logo-title">
-                    <img src="./images/logometeo.png" alt="Logo météo" class="logo" />
-                    <h1> Météo </h1>
+                    <img src="./images/logometeoblanc.png" alt="Logo météo" class="logo" />
+                    <h1>Météo</h1>
                </div>
                <div class="input-button">
-                    <input type="text" id="buttonville" list="autocompletion" placeholder="Entrez le nom d'une ville" />
+                    <input type="text" id="inputville" list="autocompletion" placeholder="Entrez le nom d'une ville" />
                     <datalist id="autocompletion"></datalist>
-                    <button id="rechercher">Rechercher</button>
+                    <button id="rechercher"><i class="fas fa-search"></i></button>
                </div>
           </header>
-          <div id="chargement" class="hidden">Chargement...</div>
-          <div id="resultatmeteo" class="hidden">
-               <h2 id="nomville"></h2>
-               <img id="iconemeteo" src="" alt="Icône météo" />
-               <p id="temperature"></p>
-               <p id="description"></p>
-               <p id="vent"></p>
-               <p id="humidite"></p>
+
+          <div id="chargement" class="hidden">Chargement en cours ...</div>
+          <div class="contenu-flex">
+               <div id="resultatmeteo" class="hidden">
+                    <h2 id="nomville"></h2>
+                    <img id="iconemeteo" src="" alt="Icône météo" />
+                    <p id="temperature"></p>
+                    <p id="description"></p>
+                    <p id="vent"></p>
+                    <p id="humidite"></p>
+               </div>
+               <div id="previsions" class="hidden">
+                    <h2>Prévisions sur 5 jours</h2>
+                    <div id="jours"></div>
+               </div>
           </div>
      </div>
+
      <footer>
           <p class="pfooter">&copy; Valentin CAPPELLE - 2025</p>
      </footer>
