@@ -252,9 +252,6 @@ footer {
     flex: 1;
     margin: 0;
     padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
   }
 
   body {
@@ -335,6 +332,4 @@ footer {
   .jour img {
     width: 3rem;
   }
-
-
 }
