@@ -186,7 +186,11 @@ function showError(message) {
 // Auto-complétion des villes pendant la saisie
 input.addEventListener("input", async () => {
   let cityName = input.value.trim();
-  if (cityName.length < 1) return;
+  if (cityName.length < 1) {
+    autocompletion.innerHTML = "";
+    autocompletion.style.display = "none";
+    return;
+  }
 
   try {
     // Requête vers l’API gouvernementale française des communes
@@ -198,16 +202,25 @@ input.addEventListener("input", async () => {
     // Réinitialise les suggestions
     autocompletion.innerHTML = "";
 
-    // Ajoute les villes proposées
+    // Affiche les suggestions dans la div
     cities.forEach((city) => {
-      let option = document.createElement("option");
-      option.value = city.nom;
-      autocompletion.appendChild(option);
+      let div = document.createElement("div");
+      div.className = "suggestion";
+      div.textContent = city.nom;
+      div.addEventListener("click", () => {
+        input.value = city.nom;
+        autocompletion.innerHTML = "";
+        autocompletion.style.display = "none";
+      });
+      autocompletion.appendChild(div);
     });
+
+    autocompletion.style.display = "block";
   } catch (error) {
     console.error("Erreur lors de la récupération des villes :", error);
   }
 });
+
 
 // Chargement initial de la météo d'une ville par défaut
 WeatherData("Beauvais");
