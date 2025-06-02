@@ -1,5 +1,24 @@
 Application Météo - Projet JavaScript
 
+Objectif
+Créer une application météo responsive et fonctionnelle permettant à l’utilisateur de rechercher une ville française et d’obtenir en temps réel :
+- La température actuelle
+- Une description de la météo
+- Une icône météo
+- Des prévisions sur 5 jours
+- Et (en bonus) une autocomplétion dynamique des villes
+git 
+Fonctionnalités principales
+
+- Champ de recherche pour entrer une ville française
+- Bouton pour lancer la recherche
+- Affichage de la ville sélectionnée
+- Température en temps réel
+- Description météo + icône météo
+- Loader pendant le chargement
+- Changement automatique du fond d’écran selon le type de météo
+- Affichage des prévisions météo pour les 5 prochains jours
+
 APIs utilisées :
 
 OpenWeatherMap (https://openweathermap.org)

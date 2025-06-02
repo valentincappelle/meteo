@@ -221,6 +221,13 @@ input.addEventListener("input", async () => {
   }
 });
 
+document.addEventListener("click", function (e) {
+  // Vérifie si le clic est en dehors de l'input et de la div d'autocomplétion
+  if (!input.contains(e.target) && !autocompletion.contains(e.target)) {
+    autocompletion.innerHTML = "";
+    autocompletion.style.display = "none";
+  }
+});
 
 // Chargement initial de la météo d'une ville par défaut
 WeatherData("Beauvais");

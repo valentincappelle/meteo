@@ -107,7 +107,7 @@ h1 {
 .suggestion {
   padding: 0.5rem;
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-align: left;
   color: #333;
   background-color: transparent;
@@ -226,9 +226,13 @@ footer {
   header,
   #resultatmeteo,
   #previsions {
-    max-width: 90%;
+    max-width: 100%;
     margin: 2rem;
     padding: 2rem;
+  }
+  .input-button{
+    width: 82%;
+    margin: auto;
   }
 
   .logo-title {
@@ -237,7 +241,7 @@ footer {
   }
 
   #inputville {
-    width: 70%;
+    width: 100%;
     font-size: 1rem;
   }
 
@@ -327,7 +331,7 @@ footer {
   }
 
   #inputville {
-    width: 70%;
+    width: 100%;
     font-size: 1.1rem;
   }
 
